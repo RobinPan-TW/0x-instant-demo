@@ -1,19 +1,53 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-    	<title>Buy RobinToken</title>
-        <script src="https://instant.0xproject.com/instant.js" /></script>
-    </head>
-    <body>
-	<script type='text/javascript'>
-	  zeroExInstant.render(
-	    {
-	      orderSource: 'https://api.kovan.radarrelay.com/0x/v2/',
-	      networkId: 42
-	    },
-	    'body'
-	  );
+
+<head>
+	<meta charset="utf-8" />
+	<title>Buy RobinToken</title>
+	<script src="https://instant.0xproject.com/instant.js" /></script>
+	<script src="https://unpkg.com/bignumber.js@4.1.0/bignumber.js">
 	</script>
-    </body>
+</head>
+
+<body>
+	<script type='text/javascript'>
+		BigNumber.config({
+			EXPONENTIAL_AT: 1000,
+			DECIMAL_PLACES: 78
+		});
+		const signedOrders = [{
+			exchangeAddress: "0x4530c0483a1633c7a1c97d2c53721caff2caaaaf",
+			makerAddress: "0xc6643b594726577cc164e84d715aedf403fca9f3",
+			takerAddress: "0x0000000000000000000000000000000000000000",
+			senderAddress: "0x0000000000000000000000000000000000000000",
+			feeRecipientAddress: "0x0000000000000000000000000000000000000000",
+			expirationTimeSeconds: new BigNumber("1548404663157680000"),
+			salt: new BigNumber("12301101034676516796453610962649371931428255294269758598493957854559129241920"),
+			makerAssetAmount: new BigNumber("299792458000000000000000000"),
+			takerAssetAmount: new BigNumber("29979245800000000000000"),
+			makerAssetData: "0xf47261b0000000000000000000000000bcbe75079da5cf33d3e7a1712f6547161f46712b",
+			takerAssetData: "0xf47261b0000000000000000000000000c778417e063141139fce010982780140aa0cd5ab",
+			makerFee: new BigNumber("0"),
+			takerFee: new BigNumber("0"),
+			signature: "0x1cffb7f9ffb02cf8922a741c8d1a755c908a3dfe4ef5f4843c688a8bb8a60a666c3aae1b2f917755ee14519b60d47617714e967c40fb948e5fc023a696aab9a5a003"
+		}];
+		zeroExInstant.render({
+				orderSource: signedOrders,
+				networkId: 3,
+				additionalAssetMetaDataMap: {
+					"0xf47261b0000000000000000000000000bcbe75079da5cf33d3e7a1712f6547161f46712b": {
+						assetProxyId: "0xf47261b0", // ERC20 Proxy Id
+						decimals: 18,
+						symbol: "ROB",
+						name: "RobinToken",
+						// primaryColor: "#F2F7FF", // Optional
+						// iconUrl: "https://cdn.icons.com/my_icon.svg" // Optional
+					}
+				}
+			},
+			"body"
+		);
+	</script>
+</body>
+
 </html>
