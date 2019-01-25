@@ -10,7 +10,6 @@
 </head>
 
 <body>
-	<div id="zeroExInstantContainer"></div>
 	<script type='text/javascript'>
 		BigNumber.config({
 			EXPONENTIAL_AT: 1000,
@@ -32,10 +31,9 @@
 			takerFee: new BigNumber("0"),
 			signature: "0x1cffb7f9ffb02cf8922a741c8d1a755c908a3dfe4ef5f4843c688a8bb8a60a666c3aae1b2f917755ee14519b60d47617714e967c40fb948e5fc023a696aab9a5a003"
 		}];
-		const renderOptions = {
+		zeroExInstant.render({
 				orderSource: signedOrders,
 				networkId: 3,
-				//provider: window.ethereum,
 				additionalAssetMetaDataMap: {
 					"0xf47261b0000000000000000000000000bcbe75079da5cf33d3e7a1712f6547161f46712b": {
 						assetProxyId: "0xf47261b0", // ERC20 Proxy Id
@@ -46,10 +44,9 @@
 						// iconUrl: "https://cdn.icons.com/my_icon.svg" // Optional
 					}
 				}
-			};//,
-			//"body"
-		//);
-		zeroExInstant.render(Object.assign({}, renderOptions));
+			},
+			"body"
+		);
 	</script>
 </body>
 
