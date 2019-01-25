@@ -6,9 +6,9 @@
 透過 Github Pages 將購買頁面顯示給使用者
 
 對於不想自己實作 0x Instant 的使用者，透過 DEMO 頁面可以直接看到實作結果，
-並且自己嘗試購買我在 KOVAN Testnet 上發行的 "RobinToken" (部署在測試鏈，不用擔心要花真錢)，
-以更瞭解 0x Instant 的運作。
+並且自己嘗試購買我在 ROPSTEN Testnet 上發行的 "RobinToken(ROB)" ，
+以更瞭解 0x Instant 的運作。(部署在測試鏈，不用擔心要花真錢。請先登入 Metamask 後，連到 [Metamask Faucet](https://faucet.metamask.io/) 即可申請免費 ETH 測試)
 
 
 範例中傳入 `orderSource` 的值，是用 0x 生成的 `signedOrder` ，
-主要內容為販售 "RobinToken" ，價格設定為 `1 RobinToken = 0.0001 ETH`
+主要內容為販售 "RobinToken(ROB)" ，價格設定為 `1 ROB = 0.0001 ETH`
