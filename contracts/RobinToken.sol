@@ -4,7 +4,7 @@ import "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol";
 import "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol";
 
 contract RobinToken is ERC20, ERC20Detailed {
-    uint8 public constant DECIMALS = 18;
+    uint8 public constant DECIMALS = 18 ;
     uint256 public constant INITIAL_SUPPLY = 299792458 * (10 ** uint256(DECIMALS));
 
     /**
