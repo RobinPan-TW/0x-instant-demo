@@ -1,6 +1,6 @@
 # 0x-instant-demo
 
-我在 Medium 上寫的教學文章： [0x Instant 實作及深入解析](https://medium.com/@robinpan)
+我在 Medium 上寫的教學文章： [0x Instant 實作及深入解析](https://medium.com/taipei-ethereum-meetup/%E4%B8%80%E5%88%86%E9%90%98%E5%81%9A%E5%87%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BB%A3%E5%B9%A3%E8%B3%BC%E8%B2%B7app-47bacffc4c65)
 
 此 Repository 為 0x Instnat 的實作 DEMO，
 透過 Github Pages 將購買頁面顯示給使用者。
